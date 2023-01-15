@@ -10,4 +10,13 @@ jobs:
       - name: multiline script
         run: |
           node -v
-          npm -v
+  run-powershell-command:
+    runs-on: windows-latest
+    steps:
+      - name: create directory
+        run: |
+          mkdir my_file
+          cd my_file
+      - name: directory bash
+        run: pwd 
+        shell: bash
