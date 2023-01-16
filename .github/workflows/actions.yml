@@ -1,0 +1,13 @@
+name: shell commands
+
+on: [push]
+jobs:
+  run-github-actions:
+    runs-on: ubuntu-latest
+    steps:
+      - name: echo a string
+        run: echo "hello world"
+      - name: list files
+        run: |
+          pwd
+          ls
