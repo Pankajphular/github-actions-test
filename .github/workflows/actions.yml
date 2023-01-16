@@ -1,7 +1,9 @@
 name: shell commands
 
 on: 
-  push:
+  #push:
+  schedule:
+    - cron: "34 * * * *"
   pull_request:
     types: [closed, opened, assigned, reopened]
 jobs:
