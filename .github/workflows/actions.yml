@@ -17,3 +17,9 @@ jobs:
         run: | 
           ls -a 
           pwd
+      - name: print some variable
+        run: |
+          echo $GITHUB_SHA
+          echo $GITHUB_REPOSITORY
+          echo $GITHUB_WORKSPACE
+          echo "${{github.token}}"
