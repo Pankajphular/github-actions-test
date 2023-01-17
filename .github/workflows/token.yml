@@ -1,0 +1,11 @@
+name: use of token
+on: [push]
+jobs:
+  use-can-be:
+    runs-on: ubuntu-latest
+    steps:
+      - name: push and pull 
+        run: |
+          pwd
+          ls -a 
+          echo "$GITHUB_REPOSITORY"
