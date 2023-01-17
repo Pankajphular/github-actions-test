@@ -1,8 +1,8 @@
 name: shell commands
 
-on: 
-  #push:
-  schedule:
+on: |
+  push
+  #schedule:
     - cron: "34 * * * *"
   pull_request:
     types: [closed, opened, assigned, reopened]
