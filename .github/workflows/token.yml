@@ -9,3 +9,18 @@ jobs:
           pwd
           ls -a 
           echo "$GITHUB_REPOSITORY"
+          echo "$GITHUB_ACTOR"
+          git init
+          git remote add origin "https://$GITHUB_ACTOR:${{secrets.GITHUB_TOKEN}}@github.com/$GITHUB_REPOSITORY.GIT"
+          git config --global user.name "pankaj"
+          git config --global user.email "pankaj@gmail.com"
+          git fetch
+          git checkout master
+          git branch --set-upstream-to=origin/master
+          git pull
+          ls -a 
+          echo $RANDOM >> random.txt
+          ls -a 
+          git add -A 
+          git commit -m "adding file"
+          git push -u origin master
