@@ -6,7 +6,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: echo a string
-        run: echoo "hello world"
+        run: echo "hello world"
         continue-on-error: true
       - name: want to run 
         run: |
@@ -17,6 +17,7 @@ jobs:
           pwd
           cd ..
           pwd
+        if: failure(
       - name: multiline script
         run: |
           node -v
