@@ -16,6 +16,7 @@ jobs:
           pwd
           cd ..
           pwd
+        if: failure()
       - name: multiline script
         run: |
           node -v
