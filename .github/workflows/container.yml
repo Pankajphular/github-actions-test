@@ -4,10 +4,10 @@ jobs:
   container_intialization:
     runs-on: ubuntu-latest
     container: 
-      image: jenkins:2.60.3
+      image: node:18-alpine3.16
     steps:
       - name: checking directory
         run: |
+          node -v
           ls -ltr
-          jenkins --version
           
