@@ -1,0 +1,13 @@
+name: container
+on: push
+jobs:
+  container_intialization:
+    runs-on: ubuntu-latest
+    container: 
+      image: jenkins:2.60.3
+    steps:
+      - name: checking directory
+        run: |
+          ls -ltr
+          jenkins --version
+          
