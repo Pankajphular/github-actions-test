@@ -7,6 +7,15 @@ jobs:
     steps:
       - name: echo a string
         run: echo "hello world"
+      - name: want to run 
+        run: |
+          mkdir file2
+          cd file2
+          mkdir file3
+          ls -ltr
+          pwd
+          cd ..
+          pwd
       - name: multiline script
         run: |
           node -v
