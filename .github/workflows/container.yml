@@ -9,5 +9,5 @@ jobs:
       - name: checking directory
         run: |
           node -v
+          cd /etc/
           ls -ltr
-          
